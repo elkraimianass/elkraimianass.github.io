@@ -18,7 +18,7 @@
         <li><a href="#menu2">EDUCATION</a></li>
         <li><a href="#menu3">PROJECTS</a></li>
     </ul>
-    <section  class="home" id="menu1">
+    <section  class="home" >
         <div class="home-img">
             <img src="mephoto_page-0001.png" alt="">
         </div>
@@ -97,9 +97,14 @@
             <br>
             <li><a href="#project3">Project 3 : <span class="highlight">Strengthening the Security of a Financial Mobile Application</span></a></li>
             <br>
-            <li><a href="#project4">Project 4 : <span class="highlight">Implementation of an ISMS compliant with ISO 27001 with an IAM solution for securing digital twins.</span></a></li>
+            <li><a href="#project4">Project 4 : <span class="highlight">Implementation of an ISMS compliant with ISO 27001 & an IAM solution for securing digital twins.</span></a></li>
             <br>
-            <li><a href="#project5">Project 5 : <span class="highlight">Risk Assessment and Security Audit : SOC Approach to Protect Information Systems</span></a></li>
+            <li><a href="#project5">Project 5 : <span class="highlight">Risk Assessment and Security Audit : SOC (Security Operations Center) Approach to Protect Information Systems</span></a></li>
+            <br>
+            <li><a href="#project6">Project 6 : <span class="highlight">Strategies for the development of a SOC (Security Operations Center) in service mode</span></a></l>
+            <br>
+            <li><a href="#project7">Project 7 : <span class="highlight">Threat Detection and Response Implementation of SIEM/XDR with WAZUH</span></a></l>
+
         </ul>
         <br>
         <br>
@@ -142,7 +147,7 @@
             <br>
             <br>
             <div class="project" id="project4">
-                <h2>Project 4 : Implementation of an ISMS compliant with ISO 27001 with an IAM solution for securing digital twins.</h2>
+                <h2>Project 4 : Implementation of an ISMS compliant with ISO 27001 & an IAM solution for securing digital twins.</h2>
                 <p>Development of a security framework that aligns with ISO 27001 standards to safeguard critical digital assets. This framework employs the EBIOS RM method, which focuses on risk management and incorporates the Plan-Do-Check-Act (PDCA) cycle for thorough risk assessment and the formulation of security measures. The process involves identifying potential risks, analyzing their impacts, implementing appropriate security controls, and continuously monitoring and improving the framework to ensure robust protection of digital assets.</p>
                 <br>
                 <p>Deployment of an Identity and Access Management (IAM) solution using Keycloak, integrating LDAP for secure access control. This solution facilitates centralized management of user identities, enabling authentication and authorization processes to ensure that only authorized individuals can access sensitive resources. The integration with LDAP provides a reliable directory service for storing user credentials and attributes, enhancing security while simplifying user management and access policies across the organization.</p>
@@ -155,13 +160,37 @@
             <br>
             <br>
             <div class="project" id="project5">
-                <h2>Project 5 : Risk Assessment and Security Audit : SOC Approach to Protect Information Systems</h2>
+                <h2>Project 5 : Risk Assessment and Security Audit : SOC (Security Operations Center) Approach to Protect Information Systems</h2>
                 <p>The exploitation of vulnerabilities on Linux using Metasploit, along with the use of tools such as Nmap, Netcat, and Wireshark, aimed to explore hosts, analyze available services, and identify network vulnerabilities. This process involved scanning networks to discover active devices with Nmap, establishing connections and testing services with Netcat, and capturing and analyzing network traffic with Wireshark. By leveraging these tools, the objective was to uncover security weaknesses and assess the overall security posture of the Linux systems in question.</p>
                 <br>
                 <p>Implementation of a Netfilter Firewall to Secure Network Segments Using Iptables Rules and Deployment of a Snort IDS for Real-Time Network Traffic Analysis, Including the Creation of Custom Rules to Detect Attacks. This initiative involved configuring a Netfilter firewall to establish robust security measures across different network segments through the use of Iptables rules, effectively controlling incoming and outgoing traffic based on defined security policies. Additionally, deploying Snort as an Intrusion Detection System (IDS) enabled continuous monitoring and analysis of network traffic in real time. Custom rules were created to tailor detection capabilities, allowing for the identification and alerting of potential attacks or malicious activities within the network, thereby enhancing the overall security posture.</p>
                 <br>
                 <br>
                 <p><strong> Tools Used : <strong> Metasploit, Nmap, Netcat, Wireshark, Iptables, Snort, TCPdump, OpenVAS, Aircrack-ng, Suricata, Nessus, Fail2ban</p>
+            </div>
+            <br>
+            <br>
+            <div class="project" id="project6">
+                <h2>Project 6 :Strategies for the development of a SOC (Security Operations Center) in service mode</h2>
+                <p>The goal is to provide a SOC as a service, offering advanced threat monitoring, effective incident detection and proactive management of responses to cyber attacks.</p>
+                <br>
+                <p>Comparative Study of SIEM and SOAR Solutions: An in-depth analysis was carried out to compare the SIEM solution "Elastic Stack" with the SOAR solution "Cortex XSOAR", and. These tools were evaluated to select the best options for the specific needs of a SOC.</p>
+                <br>
+                <p>A flexible architecture was designed, including log collection, use of VPN tunnels to secure connections and integration of orchestration tools to automate incident responses.</p>
+                <br>
+                <p>Deployment and Integration of Tools ; Elasticsearch and Cortex XSOAR technologies have been integrated to provide real-time monitoring and automated response to incidents. Playbooks have been developed to address specific scenarios, such as phishing and supply chain compromise. </p>
+                <br>
+                <p><strong> Tools Used : <strong> Elastic Stack (ELK), Cortex XSOAR, VPN  </p>                
+            </div>
+            <br>
+            <br>
+            <div class="project" id="project7">
+                <h2>Project 7 :Threat Detection and Response Implementation of SIEM/XDR with WAZUH</h2>
+                <p>This project aimed to design and deploy an open-source SIEM/XDR solution with Wazuh to enhance the security of information systems. Emphasis was placed on improving threat detection and real-time incident response capabilities through the customization of detection rules and the implementation of active responses.</p>
+                <br>
+                <p>The deployed environment allowed for the collection, correlation and analysis of security events from agents installed on Linux and Windows systems. Various attacks, such as SQL injection, privilege escalation and brute force attacks were simulated to test detection capabilities. Advanced features included file integrity monitoring (FIM), integration with VirusTotal for malware detection, and active response, allowing malicious IP addresses to be blocked or suspicious files automatically deleted.</p>
+                <br>
+                <p><strong> Tools Used : <strong> Wazuh, ELK Stack (Elasticsearch, Logstash, Kibana), VirusTotal, Nmap, Hydra, VirtualBox  </p>                
             </div>
 
 

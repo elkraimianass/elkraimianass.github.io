@@ -30,7 +30,7 @@
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/anass-el-kraimi-404a08331" title="Anass El kraimi"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/elkraimianass" title="elkraimianass"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:anass.elkraimi@ump.ac.ma" title="anass.elkraimi@ump.ac.ma"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:anasselkraimi.5@gmail.com" title="anass.elkraimi@ump.ac.ma"><i class="fa-solid fa-envelope"></i></a>
                 <a href="tel:+212 635859849" target="_blank" title="+212 635859849"><i class="fa-solid fa-phone"></i></a>
             </div>
         </div>
@@ -88,7 +88,7 @@
         <br>
         <br>
 
-        <h2>List of Completed Personal Projects :</h2>
+        <h2>List of Completed Academic Projects :</h2>
         <br>
         <ul class="project-list">
             <li><a href="#project1">Project 1 : <span class="highlight">Privilege Management and Securing Active Directory.</span></a></li>
@@ -97,7 +97,7 @@
             <br>
             <li><a href="#project3">Project 3 : <span class="highlight">Strengthening the Security of a Financial Mobile Application and a password manager.</span></a></li>
             <br>
-            <li><a href="#project4">Project 4 : <span class="highlight">Implementation of an ISMS compliant with ISO 27001:2022  for securing digital twins.</span></a></li>
+            <li><a href="#project4">END-OF-YEAR project : <span class="highlight">Implementation of an Information Security Management System (ISMS) compliant with ISO 27001:2022 for Securing Digital Twins in the Context of Industry 4.0 .<span></a></li>
             <br>
             <li><a href="#project5">Project 5 : <span class="highlight">Comprehensive Access Control and IAM Solution Deployment: Securing Digital Identities with Keycloak.</span></a></li>
             <br>
@@ -113,10 +113,23 @@
 
             <div class="project" id="project1">
                 <h2>Project 1 : Privilege Management and Securing Active Directory</h2>
-                <p>Conduct a comprehensive analysis of Access Control Lists (ACLs) to identify security vulnerabilities and instances of excessive privileges. This process utilizes specialized tools such as BloodHound, which maps relationships and permissions in Active Directory, ADRecon for gathering information about AD environments, and AD ACL Scanner for auditing and assessing ACL configurations. The goal is to enhance security posture by pinpointing misconfigurations and potential attack vectors.</p>
                 <br>
-                <p>Implementation of strict password policies and enhanced authentication measures; auditing permissions and securing authentication protocols to ensure the protection of Active Directory (AD) systems. This involves establishing guidelines for password complexity and expiration, enforcing multi-factor authentication (MFA), and regularly reviewing user permissions to mitigate risks. Additionally, securing protocols such as Kerberos and NTLM is essential to prevent unauthorized access and maintain the integrity of the AD environment .</p>
+                <p style="color: purple;"><strong>Part 1: Enhancing Domain Controller Security and Access Control Measures.</strong></p>
+                <p>This project centers on the robust security configuration of Active Directory (AD), critical for managing identities, permissions, and access within a networked environment. The initial phase focused on securing Domain Controllers (DC), which manage authentication processes and control access across the network. Various hardening measures were implemented to strengthen DC security, including disabling unnecessary services such as Bluetooth Support and Windows Media Player Sharing to reduce exposure to potential attacks. Additionally, physical security practices were enforced by restricting access to server rooms and maintaining strict control over patching and updates to mitigate known vulnerabilities.</p>
                 <br>
+                <p>To prevent privilege escalations, the project replaced default Group Policy Objects (GPOs) with custom, security-focused GPOs, tailored specifically for administrative roles. Backup strategies were a significant focus, utilizing Windows Server Backup to establish both regular and ad-hoc backup schedules, ensuring rapid recovery capabilities and data integrity for Active Directory. The project also integrated auditing tools like AD ACL Scanner, Bloodhound, and ADRecon to automate the analysis of Access Control Lists (ACLs), identifying permissions that could inadvertently allow privilege escalation. By conducting periodic, automated scans, the security posture of the AD environment was elevated, providing visibility into excessive permissions and supporting proactive security management.</p>
+                <br>
+                <br>
+                <p style="color: purple;"><strong>Part 2: Strengthening Authentication and Adopting Granular Access Control.</strong></p>
+                <p>The project placed a strong emphasis on refining password policies and authentication methods within Active Directory to safeguard against unauthorized access. This involved creating granular password policies for critical service accounts and IT administrators, using complex criteria (e.g., enforcing passwords with a minimum of 25 characters, complexity requirements, and a history to prevent reuse). Service account policies were specifically configured to support secure application management without compromising the AD environment, providing a tailored approach to account security.</p>
+                <br>
+                <p>Authentication mechanisms were further secured by disabling NTLMv2, a legacy authentication protocol, and enabling LDAP signing to protect against man-in-the-middle (MitM) attacks. The project also implemented a password rotation protocol for sensitive accounts like KRBTGT and DSRM, essential for preventing credential-based attacks, including the creation of “Golden Tickets” that could enable unauthorized access across the network.</p>
+                <br>
+                <p>A core aspect of the project was adopting the principle of least privilege. Users and service accounts were restricted to the minimum permissions necessary for their roles, reducing the risk of privilege abuse. This included developing a tiered access model to segment accounts by role and permission level, from regular user accounts to privileged administrator accounts. Using tools like Bloodhound and ADRecon, potential privilege escalation paths were mapped and mitigated, enhancing security across the environment.</p>
+                <br>
+                <p>Overall, this project delivered a fortified Active Directory setup through rigorous privilege management, regular access audits, and comprehensive backup and recovery protocols. By combining technical configurations with proactive monitoring, the project created a resilient authentication and access control framework that secures critical resources, minimizes attack surfaces, and aligns with advanced security standards.</p>
+                <br>
+                <p style="color: purple;"><strong>-------------------------------------------------</strong></p>
                 <br>
                 <p><strong> Tools Used  : <strong> BloodHound, ADRecon, AD ACL Scanner, Multi-Factor Authentication (MFA) Solutions, Password Policy Management Tools, PowerShell, Kerberos Tools, NTLM Auditing Tools, SIEM Solutions, Nessus, Active Directory Administrative Center (ADAC), Group Policy Management Console (GPMC)</p>
             </div>
@@ -125,10 +138,17 @@
 
             <div class="project" id="project2">
                 <h2>Project 2 : Security Audit and Web System Penetration Testing</h2>
-                <p>Performing a thorough penetration test following the VAPT (Vulnerability Assessment and Penetration Testing) methodology, leveraging industry-standard tools like Burp Suite, OWASP ZAP, and Nmap. The objective is to identify and exploit critical vulnerabilities within web applications, such as SQL injection, cross-site scripting (XSS), and other high-risk flaws. This process is conducted in compliance with the OWASP Top 10 framework, ensuring a comprehensive evaluation of security risks. The testing process involves both automated scanning and manual exploitation to validate vulnerabilities and assess the overall security posture of the system.</p>
                 <br>
-                <p>Preparing a comprehensive audit report that outlines the vulnerabilities identified during the penetration testing process. The report includes a detailed analysis of each security flaw, its potential impact, and the risk level associated with it. Additionally, it provides strategic recommendations tailored to the application's environment, offering both immediate fixes and long-term solutions to mitigate the risks. The report also includes best practices for strengthening the overall security posture, such as improving authentication mechanisms, securing data transmission, and addressing coding vulnerabilities.</p>
+                <p style="color: purple;"><strong>Part 1: Pentration Testing.</strong></p>
+                <p>Performing a thorough penetration test following the VAPT (Vulnerability Assessment and Penetration Testing) methodology, leveraging industry-standard tools like Burp Suite  for conducting automated and manual testing of web applications, OWASP ZAP for additional automated scanning capabilities, helping to discover high-risk flaws in web applications in line with the OWASP Top 10 framework  and Nmap for network scanning to uncover potential entry points and gather information about the application's environment. </p>
                 <br>
+                <p>The objective is to identify and exploit critical vulnerabilities within web applications, such as SQL injection, cross-site scripting (XSS),Xpath Injection , URL Injection ,Link Injection  and other high-risk flaws. This process is conducted in compliance with the OWASP Top 10 framework, ensuring a comprehensive evaluation of security risks. The testing process involves both automated scanning and manual exploitation to validate vulnerabilities and assess the overall security posture of the system.</p>
+                <br>
+                <br>
+                <p style="color: purple;"><strong>Part 2 : Reaction Report.</strong></p>
+                <p>Preparing a comprehensive audit report that outlines the vulnerabilities identified during the penetration testing process. The report includes a detailed analysis of each security flaw, its potential impact, and the risk level associated with it , also the methods used during testing . Additionally, it provides strategic recommendations tailored to the application's environment, offering both immediate fixes and long-term solutions to mitigate the risks. The report also includes best practices for strengthening the overall security posture, such as improving authentication mechanisms, securing data transmission, and addressing coding vulnerabilities.</p>
+                <br>
+                <p style="color: purple;"><strong>-------------------------------------------------</strong></p>
                 <br>
                 <p><strong> Tools Used  : <strong> Burp Suite, OWASP ZAP, Nmap, Metasploit, Nessus, Acunetix, Wireshark, SQLMap, Netcat, Aircrack-ng</p>
             </div>
@@ -137,48 +157,96 @@
 
             <div class="project" id="project3">
                 <h2>Project 3 : Strengthening the security of a mobile financial application and a password manager: static and dynamic analysis.</h2>
-                <p>Evaluation of security mechanisms in the source code, emphasizing critical aspects such as key generation processes, encryption techniques (AES, RSA), and the validation of SSL/TLS certificates to ensure secure communication. The analysis employs a variety of tools: Jadx-GUI is used for decompiling and exploring Android application bytecode, Apk-tool facilitates the extraction and rebuilding of APK files for in-depth examination, and Ghidra serves as a powerful reverse engineering tool to analyze and scrutinize binary code, allowing for a thorough assessment of potential vulnerabilities and the overall security posture of the application. This evaluation aims to identify weaknesses in the implementation of security mechanisms and provide recommendations for enhancement.</p>
                 <br>
-                <p>Conducting real-time dynamic analyses using Burp Suite and Frida, which includes techniques for bypassing SSL Pinning and executing Man-in-the-Middle (MitM) attacks to test the security of data flows. This process involves intercepting and inspecting network traffic to identify potential vulnerabilities, as well as modifying application behavior at runtime to ensure that security measures are robust against various attack vectors. The analysis aims to assess the application's resilience against common threats and to provide actionable insights for strengthening data protection mechanisms.</p>
+                <p style="color: purple;"><strong>Password Manager.</strong></p>
+                <p>My objective was to assess the potential vulnerabilities of a popular password manager by performing static and dynamic analyses on its APK file. The static analysis was conducted using Jadx-gui, a decompiler that allows for obtaining the source code of the application from the APK. This enabled me to examine the Android Manifest.xml and string.xml files to identify sensitive permissions and potentially risky configurations, such as debugging mode or backup activation, which could expose the application's data to attacks. I also explored the code to identify any potential API keys or sensitive URLs that could be exploited.</p>
                 <br>
+                <p>For the dynamic analysis, I used Burp Suite to intercept network traffic and verify that the exchanged data is properly encrypted. By bypassing SSL Pinning, I was able to observe whether sensitive information was transmitted in plaintext. I also integrated Frida and Objection to inject live commands into the application, allowing me to test the robustness of its protections in real time. For example, I was able to simulate attacks on the master password validation and observe how the data is protected during an intrusion attempt. These techniques provided me with an advanced understanding of the security measures of this application and helped me develop solid skills in reverse engineering and mobile security.</p>
+                <br>
+                <br>
+                <p style="color: purple;"><strong>Mobile Financial Application.</strong></p>
+                <p>In the static analysis phase, I used several tools to explore the source code and permissions of the application. With Jadx-gui and APK-TOOL, I was able to decompile the application to examine the AndroidManifest.xml file, which contains essential information about sensitive permissions and configurations, such as access to SMS messages or network access. I also used Ghidra, a reverse engineering tool, to inspect parts of the code in C++ and assembly to detect potential vulnerabilities and examine cryptographic implementations. These steps allowed me to identify specific features such as unique identifier authentication, encryption of sensitive data using AES, and session token management.</p>
+                <br>
+                <p>For the dynamic analysis, I set up a testing environment using an Android emulator (Genymotion) connected to Burp Suite to intercept network traffic and observe the security of data exchanges in real time. I bypassed SSL Pinning using Frida and Objection, which allowed me to capture encrypted data and simulate man-in-the-middle attacks. I also observed how the application handles location and network access permissions, noting the interactions with the device's GPS and wireless network.</p>
+                <br>
+                <p style="color: purple;"><strong>-------------------------------------------------</strong></p>
                 <br>
                 <p><strong> Tools Used : <strong> Jadx-GUI, Apktool, Ghidra, Burp Suite, Frida, Wireshark, Mitmproxy, Charles Proxy, Radare2, MobSF, SSLyze, OWASP Dependency-Check</p>
             </div>
             <br>
             <br>
             <div class="project" id="project4">
-                <h2>Project 4 : Implementation of an ISMS compliant with ISO 27001  for securing digital twins.</h2>
-                <p>Development of a security framework that aligns with ISO 27001 standards to safeguard critical digital assets. This framework employs the EBIOS RM method, which focuses on risk management and incorporates the Plan-Do-Check-Act (PDCA) cycle for thorough risk assessment and the formulation of security measures. The process involves identifying potential risks, analyzing their impacts, implementing appropriate security controls, and continuously monitoring and improving the framework to ensure robust protection of digital assets.</p>
+                <h2>END-OF-YEAR project : Implementation of an Information Security Management System (ISMS) compliant with ISO 27001:2022 for Securing Digital Twins in the Context of Industry 4.0</h2>
                 <br>
-                <p>To ensure the security of digital assets, we have added other strong solutions to protect digital twins, such as:</p>
-                <p>*/Implementation of Access Control and Audit :: Strict access control, coupled with audit mechanisms, allows users to monitor their activities and quickly detect anomalies.</p>
-                <p>*/Use of Encryption and Authentication :: Encrypting data and implementing strong authentication are crucial for ensuring the confidentiality and integrity of sensitive information.</p>
-                <p>*/The Zero Trust Approach :: By adopting a Zero Trust approach, every access request is systematically verified, significantly reducing the risk of security breaches.</p>
-                <p>*/Blockchain-Based DTs :: Utilizing blockchain technology for digital twins can provide enhanced traceability and security through immutable records.</p>
+                <p>The main objective of this project was to secure sensitive information of digital twins, by reducing the risks of cyberattacks and ensuring the confidentiality, integrity, and availability of data. In a context of proliferating cyber threats, this project addressed critical data protection challenges by supporting operational continuity and the resilience of the infrastructure.</p>
+                <br>
+                <p>Methodology and Implementation Steps : </p>
+                <br>
+                <p style="color: purple;"><strong>The PDCA methodology</strong></p>
+                <p>also known as the Deming cycle or continuous improvement cycle, is a management framework used to systematically improve processes and products : </p>
+                <br>
+                <p><strong> PLAN : <strong> The planning phase includes the identification of critical components such as sensors, data storage, and applications, as well as conducting a risk assessment to detect vulnerabilities and potential threats, such as unauthorized access, data manipulation, injection of malicious data, and Denial of Service (DDoS) attacks. Security objectives are defined to ensure data confidentiality, integrity, and availability, accompanied by appropriate security policies. Implementing strict access controls and monitoring mechanisms for employees with elevated privileges is essential. This could include applying the principle of least privilege and implementing identity and access management (IAM) technologies to limit the risk of leakage or alteration of sensitive data. Incident response plans ensure a rapid and effective response in case of an incident. Establishing a Security Operations Center (SOC) is crucial; this team would be responsible for continuously monitoring network activities, detecting potential threats using solutions like SIEM, IDS, and IPS, and responding promptly to security incidents.</p>
+                <br>
+                <p><strong> Do : <strong> In the execution phase, security measures are implemented, including the installation of firewalls, intrusion detection systems, and the application of role-based access controls to ensure that only authorized users have access to sensitive information. At the same time, training sessions are organized for staff to promote a thorough understanding of security best practices.</p>
                 <br>  
+                <p> <strong> Check : <strong> The verification phase involves continuously monitoring the Digital Twin environment, using IDS/Snort to detect anomalies and assessing the effectiveness of the implemented measures through penetration testing. Security audits cover essential topics, such as security protocols and incident management. The results of this evaluation allow for the analysis of the performance of security policies.</p>
                 <p>Use of the MITRE ATT&CK framework for creating attack scenarios and implementing cyber security resilience tests. Conducting regular internal audits to ensure compliance with safety standards and ensure continuous improvement.</p>
                 <br>
-                <p><strong> Tools Used: <strong> ISO 27001 Compliance Tools, EBIOS RM Method, linux</p>
+                <p> <strong> Act : <strong> Finally, in the action phase, the results are examined, and security policies are adjusted based on identified weaknesses, including updating procedures and adopting new technologies. The continuous improvement process is integrated to adapt the security framework in response to evolving threats and risks.</p>
+                <br>
+                <br>
+                <p style="color: purple;"><strong>Risk Analysis with the EBIOS RM Method</strong></p>
+                <p>The EBIOS Risk Manager (EBIOS RM) method was chosen to manage information security risks. This method, developed by ANSSI, allowed us to break down the project into four specific workshops:</p>
+                <br>
+                <p> <strong> Framing and Security Foundation : <strong> This step allowed us to identify the resources requiring enhanced protection, such as personal data and network infrastructures. </p>
+                <br>
+                <p><strong> Identification of Risk Sources : <strong> Identification of threats (both internal and external) and vulnerabilities that may affect information security. This included the analysis of risks related to hacking, data theft, and denial-of-service attacks.</p>
+                <br>
+                <p><strong> Creation of Strategic Scenarios : <strong> Development of high-level risk scenarios and identification of stakeholders to model threats based on strategic assets and define appropriate protective measures. Then, we describe a concrete simulation of a set of attacks (data manipulation and injection of malicious data, brute force).</p>
+                <br>
+                <p><strong> Risk Treatment : <strong> Selection of strategies to mitigate identified risks. We established a continuous improvement plan to ensure that security measures can adapt to new threats. </p>
+                <br>
+                <p style="color: purple;"><strong>-------------------------------------------------</strong></p>
+                <br>
+                <p><strong> Tools Used: <strong> ISO 27001 Compliance Tools, EBIOS RM Method, PDCA method, linux</p>
             </div>
             <br>
             <br>
             <div class="project" id="project5">
                 <h2>Project 5 : Comprehensive Access Control and IAM Solution Deployment: Securing Digital Identities with Keycloak</h2>
-                <p>Access Management : The analysis focuses on access management mechanisms within an information system, emphasizing adherence to the principle of least privilege. The access control strategies explored include role-based (RBAC) and attribute-based (ABAC) models, enabling granular management of permissions. These approaches aim to limit access to critical resources while ensuring users have only the necessary rights to perform their tasks, thereby enhancing overall system security.</p>
                 <br>
-                <p>Implementation of an IAM Solution The implementation of the IAM solution leverages Keycloak, an open-source tool, to manage identities and access control. Using Docker, the required containers, including LDAP and a mail server, are deployed to facilitate user configuration and management. The integration of features such as Single Sign-On (SSO) and access policy management provides a flexible and secure solution, meeting both compliance requirements and the operational needs of businesses.</p>               
+                <p style="color: purple;"><strong>Part 1: Implementing a Standards-Compliant IAM Solution .</strong></p>
+                <p>This project aimed to design and implement a robust Identity and Access Management (IAM) system adhering to ISO 27001 and NIST Cybersecurity Framework (CSF) standards. The objective was to create a secure infrastructure that protects critical resources while efficiently managing the lifecycle of user identities and access rights. The implementation began with a thorough exploration of IAM principles, covering identity management, access request mechanisms, federated identity, and Single Sign-On (SSO). Additionally, a normative analysis of ISO 27001 and NIST CSF provided guidance on relevant compliance controls for IAM solutions, ensuring the architecture meets international security standards.</p>
                 <br>
+                <p>A comparative study of open-source IAM tools, including Keycloak, Gluu, and FusionAuth, was conducted to identify the best-fit solution. Keycloak was chosen for its flexibility, extensive feature set, and compatibility with Docker, LDAP, and mail server integrations. The project documentation detailed the setup, including the creation of realms, client registration, and token configuration to manage user identities and authentication.</p>
+                <br>
+                <br>
+                <p style="color: purple;"><strong>Part 2: Advanced IAM Configuration and Security Enhancements .</strong></p>
+                <p>The second phase of the project focused on the advanced configuration and security hardening of the IAM environment. Custom access policies were implemented to align with the principle of least privilege, allowing users and applications to access only what was necessary. Integration with Docker streamlined the deployment of LDAP for directory services and a mail server for account verification, enhancing the security and efficiency of identity management workflows.</p>
+                <br>
+                <p>To strengthen authentication, Keycloak’s support for Multi-Factor Authentication (MFA) and federated identity was configured, allowing secure SSO across multiple domains. The project also introduced granular access controls for privileged users and system administrators, monitored through real-time logging and auditing, as required by ISO and NIST standards. This layered approach ensured a comprehensive, secure IAM setup that not only complies with regulatory requirements but also strengthens overall cybersecurity resilience by controlling identity and access processes efficiently.</p>
+                <br>
+                <p style="color: purple;"><strong>-------------------------------------------------</strong></p>
                 <br>
                 <p><strong> Tools Used: <strong> Keycloak, Docker, LDAP</p>
             </div>
             <br>
             <br>
             <div class="project" id="project6">
-                <h2>Project 6 : Risk Assessment and Security Audit : SOC (Security Operations Center) Approach to Protect Information Systems</h2>
-                <p>The exploitation of vulnerabilities on Linux using Metasploit, along with the use of tools such as Nmap, Netcat, and Wireshark, aimed to explore hosts, analyze available services, and identify network vulnerabilities. This process involved scanning networks to discover active devices with Nmap, establishing connections and testing services with Netcat, and capturing and analyzing network traffic with Wireshark. By leveraging these tools, the objective was to uncover security weaknesses and assess the overall security posture of the Linux systems in question.</p>
+                <h2>Project 6 : Risk Assessment and Security Audit : SOC (Security Operations Center) Approach to Protect Information Systems.</h2>
                 <br>
-                <p>Implementation of a Netfilter Firewall to Secure Network Segments Using Iptables Rules and Deployment of a Snort IDS for Real-Time Network Traffic Analysis, Including the Creation of Custom Rules to Detect Attacks. This initiative involved configuring a Netfilter firewall to establish robust security measures across different network segments through the use of Iptables rules, effectively controlling incoming and outgoing traffic based on defined security policies. Additionally, deploying Snort as an Intrusion Detection System (IDS) enabled continuous monitoring and analysis of network traffic in real time. Custom rules were created to tailor detection capabilities, allowing for the identification and alerting of potential attacks or malicious activities within the network, thereby enhancing the overall security posture.</p>
+                <p style="color: purple;"><strong>Part 1 : Linux Vulnerability Analysis with Metasploit, Nmap, Netcat, and Wireshark .</strong></p>
+                <p>The exploitation of vulnerabilities on Linux using Metasploit for leveraging identified vulnerabilities to simulate attacks, testing the resilience of the Linux systems against real-world threats , along with the use of tools such as Nmap for scanning networks to discover active devices and analyze available services, revealing potential entry points for exploitation , Netcat for establishing connections to test and interact with services on discovered devices, allowing for service verification and banner grabbing , and Wireshark for capturing and analyzing network traffic to identify suspicious patterns and vulnerabilities, providing insights into data flows and potential security weaknesse .</p>
                 <br>
+                <p>The combined approach allows a comprehensive security analysis, as each tool brings specific insights into the state of the network, from surface-level scans to deep vulnerability exploitation. This process helps uncover and understand potential weaknesses, offering a clear view of the Linux systems’ security posture and providing guidance for reinforcing defenses.</p>
+                <br>
+                <br>
+                <p style="color: purple;"><strong>Part 2 : Securing Network Segments with Netfilter and Snort IDS for Attack Detection .</strong></p>
+                <p>Implementation of a Netfilter Firewall for securing network segments through Iptables rules, establishing robust security measures by effectively controlling incoming and outgoing traffic based on defined security policies , and Deployment of a Snort IDS for real-time network traffic analysis, enabling continuous monitoring and analysis of traffic to detect potential threats, Including the Creation of Custom Rules that created for Snort to tailor detection capabilities, allowing for the identification and alerting of potential attacks or malicious activities within the network .</p>
+                <br>
+                <p>This initiative involved configuring a Netfilter firewall to establish robust security measures across different network segments through the use of Iptables rules, effectively controlling incoming and outgoing traffic based on defined security policies. Additionally, deploying Snort as an Intrusion Detection System (IDS) enabled continuous monitoring and analysis of network traffic in real time. Custom rules were created to tailor detection capabilities, allowing for the identification and alerting of potential attacks or malicious activities within the network, thereby enhancing the overall security posture.</p>              
+                <br>
+                <p style="color: purple;"><strong>-------------------------------------------------</strong></p>
                 <br>
                 <p><strong> Tools Used : <strong> Metasploit, Nmap, Netcat, Wireshark, Iptables, Snort, TCPdump, OpenVAS, Aircrack-ng, Suricata, Nessus, Fail2ban</p>
             </div>
@@ -186,9 +254,19 @@
             <br>
             <div class="project" id="project7">
                 <h2>Project 7 :Threat Detection and Response Implementation of SIEM/XDR with WAZUH</h2>
-                <p>This project aimed to design and deploy an open-source SIEM/XDR solution with Wazuh to enhance the security of information systems. Emphasis was placed on improving threat detection and real-time incident response capabilities through the customization of detection rules and the implementation of active responses.</p>
                 <br>
-                <p>The deployed environment allowed for the collection, correlation and analysis of security events from agents installed on Linux and Windows systems. Various attacks, such as SQL injection, privilege escalation and brute force attacks were simulated to test detection capabilities. Advanced features included file integrity monitoring (FIM), integration with VirusTotal for malware detection, and active response, allowing malicious IP addresses to be blocked or suspicious files automatically deleted.</p>
+                <p style="color: purple;"><strong>Part 1: Deploying a Custom SIEM/XDR Architecture with Wazuh .</strong></p>
+                <p>This project involved the design and deployment of a robust open-source Security Information and Event Management (SIEM) and Extended Detection and Response (XDR) solution using Wazuh. The architecture was centered around a Wazuh server, responsible for aggregating security data from Linux and Windows agents. The deployment included securing the Wazuh server’s infrastructure, with each agent configured to monitor logs and security events and report findings in real-time. This setup allowed for a streamlined flow of information, enabling detailed visibility and prompt threat detection across all endpoints.</p>
+                <br>
+                <p>The project also involved customizing detection rules for specific attack types such as brute-force, SQL injection, and privilege escalation. With Wazuh's indexer and modular agents, the system could identify key indicators of these attacks, leveraging its compatibility with MITRE ATT&CK to enrich alerts with threat intelligence. These integrations helped create an actionable intelligence framework, enhancing the organization’s defense capabilities by ensuring comprehensive monitoring across all network segments.</p>
+                <br>
+                <br>
+                <p style="color: purple;"><strong>Part 2: Advanced Active Response and Automated Threat Mitigation .</strong></p>
+                <p>In the second phase, Wazuh’s active response feature was configured to enable automatic mitigation actions. This included blocking IPs involved in suspicious activities like network scans or unauthorized access attempts, all in real-time. To supplement this, VirusTotal integration was implemented to scan suspicious files across the network, triggering automated responses to delete or quarantine infected files, significantly reducing the manual intervention needed for incident response.</p>
+                <br>
+                <p>The project further incorporated File Integrity Monitoring (FIM) for critical directories, enabling detection of unauthorized file modifications—a key indicator of potential malware infections or insider threats. Advanced active response rules for SSH log monitoring and automated IP blocking were also configured to detect failed SSH negotiation attempts and escalate responses for potential brute-force attacks. The combination of these automated responses and monitoring rules created a dynamic and proactive security posture, demonstrating the effectiveness of Wazuh as an adaptable and scalable SIEM/XDR solution in a modern SOC environment.</p>
+                <br>
+                <p style="color: purple;"><strong>-------------------------------------------------</strong></p>
                 <br>
                 <p><strong> Tools Used : <strong> Wazuh, ELK Stack (Elasticsearch, Logstash, Kibana), VirusTotal, Nmap, Hydra, VirtualBox  </p>                
             </div>
